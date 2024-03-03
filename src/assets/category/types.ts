@@ -1,3 +1,5 @@
+import { IProductItem } from "../product/list/types";
+
 export interface ICategoryCreate {
     name: string;
     file: File|undefined;
@@ -27,4 +29,23 @@ export interface IGetCategories {
     totalPages: number,
     totalElements: number,
     number: number
+}
+
+export interface ICategorySearch{
+    name: string,
+    page: number,
+    size: number
+}
+
+export interface IGetProducts{
+    list: IProductItem[],
+    totalCount: number
+}
+
+export interface IProductSearch{
+    name?: string,
+    description?: string,
+    category?: string,
+    page: number,
+    size: number
 }
